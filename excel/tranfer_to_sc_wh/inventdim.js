@@ -3,7 +3,7 @@ const router = express.Router()
 const db = require('../../db')
 // middleware that is specific to this router
 router.use((req, res, next) => {
-  console.log('/excel/tranfer_to_sc_wh/allorder Time: ', Date.now())
+  console.log('/excel/tranfer_to_sc_wh/inventdim Time: ', Date.now())
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
@@ -13,28 +13,7 @@ router.use((req, res, next) => {
 router.get('/', (req, res) => {
     var sql = require("mssql");
     var config = db.configdatabesd
-    const Q ="SELECT\n" +
-    "	PRODTABLE.BOMID, \n" +
-    "	PRODTABLE.COLLECTREFPRODID, \n" +
-    "	PRODTABLE.DLVDATE, \n" +
-    "	PRODTABLE.INVENTDIMID, \n" +
-    "	PRODTABLE.INVENTREFTRANSID, \n" +
-    "	PRODTABLE.ITEMID, \n" +
-    "	PRODTABLE.NAME, \n" +
-    "	PRODTABLE.PRODGROUPID, \n" +
-    "	PRODTABLE.PRODID, \n" +
-    "	PRODTABLE.PRODPOOLID, \n" +
-    "	PRODTABLE.PRODSTATUS, \n" +
-    "	PRODTABLE.QTYCALC, \n" +
-    "	PRODTABLE.REMAININVENTPHYSICAL, \n" +
-    "	PRODTABLE.ROUTEID, \n" +
-    "	PRODTABLE.PARTITION, \n" +
-    "	PRODTABLE.RECID, \n" +
-    "	PRODTABLE.RECVERSION, \n" +
-    "	PRODTABLE.CREATEDDATETIME, \n" +
-    "	PRODTABLE.CREATEDBY\n" +
-    "FROM\n" +
-    "	dbo.PRODTABLE";
+    const Q ="SELECT * FROM [dbo].[INVENTDIM]";
     sql.connect(config, function (err) {
        if (err) console.log(err)
         var request = new sql.Request();

@@ -3,7 +3,7 @@ const router = express.Router()
 const db = require('../../db')
 // middleware that is specific to this router
 router.use((req, res, next) => {
-  console.log('/excel/tranfer_to_sc_wh/allorder Time: ', Date.now())
+  console.log('/excel/tranfer_to_sc_wh/getpool Time: ', Date.now())
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
