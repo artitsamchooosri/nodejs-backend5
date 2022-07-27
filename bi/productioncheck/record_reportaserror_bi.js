@@ -44,7 +44,8 @@ router.get('/', (req, res) => {
     "		PRODJOURNALPROD.INVENTDIMID = INVENTDIM.INVENTDIMID\n" +
     "WHERE\n" +
     "	PRODJOURNALTABLE.POSTED = '1' AND\n" +
-    "	PRODJOURNALPROD.QTYERROR > 0";
+    "	PRODJOURNALPROD.QTYERROR <> 0";
+    //console.log(Q);
     sql.connect(config, function (err) {
        if (err) console.log(err)
         var request = new sql.Request();

@@ -94,6 +94,7 @@ router.get('/', (req, res) => {
     "	dbo.GENERALJOURNALENTRY\n" +
     "	ON \n" +
     "		journalpicking.VOUCHER = GENERALJOURNALENTRY.SUBLEDGERVOUCHER";
+    console.log(Q);
     sql.connect(config, function (err) {
        if (err) console.log(err)
         var request = new sql.Request();

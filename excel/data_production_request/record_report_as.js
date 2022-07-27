@@ -93,6 +93,7 @@ router.get('/', (req, res) => {
     "		[tran].VOUCHERPHYSICAL = journalreportas.VOUCHER\n" +
     "WHERE\n" +
     "	[tran].REFERENCECATEGORY = '2'";
+    console.log(Q);
     sql.connect(config, function (err) {
        if (err) console.log(err)
         var request = new sql.Request();

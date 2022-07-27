@@ -50,6 +50,7 @@ router.get('/', (req, res) => {
     "	dbo.ROUTEOPRTABLE\n" +
     "	ON \n" +
     "		PRODJOURNALROUTE.OPRID = ROUTEOPRTABLE.OPRID";
+    console.log(Q);
     sql.connect(config, function (err) {
        if (err) console.log(err)
         var request = new sql.Request();
