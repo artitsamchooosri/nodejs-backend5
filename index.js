@@ -44,6 +44,9 @@ const data_production_request_jobcard = require('./excel/data_production_request
 const data_production_request_workorderall = require('./excel/data_production_request/workorderall')
 const data_production_request_picking = require('./excel/data_production_request/picking')
 
+const flutter_productname = require('./flutter/productname')
+
+
 app.use(cors())
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -93,6 +96,7 @@ app.use('/excel/data_production_request/jobcard', data_production_request_jobcar
 app.use('/excel/data_production_request/workorderall', data_production_request_workorderall)
 app.use('/excel/data_production_request/picking', data_production_request_picking)
 
+app.use('/flutter/productname', flutter_productname)
 
 
 
