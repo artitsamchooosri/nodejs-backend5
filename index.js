@@ -44,6 +44,8 @@ const data_production_request_jobcard = require('./excel/data_production_request
 const data_production_request_workorderall = require('./excel/data_production_request/workorderall')
 const data_production_request_picking = require('./excel/data_production_request/picking')
 
+const purchreq_tracking = require('./excel/purchreq/tracking')
+
 const flutter_productname = require('./flutter/productname')
 
 
@@ -95,6 +97,7 @@ app.use('/excel/data_production_request/record_report_as', data_production_reque
 app.use('/excel/data_production_request/jobcard', data_production_request_jobcard)
 app.use('/excel/data_production_request/workorderall', data_production_request_workorderall)
 app.use('/excel/data_production_request/picking', data_production_request_picking)
+app.use('/excel/purchreq/tracking', purchreq_tracking)
 
 app.use('/flutter/productname', flutter_productname)
 
