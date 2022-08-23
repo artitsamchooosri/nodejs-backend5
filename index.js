@@ -119,6 +119,8 @@ app.get('/', function (req, res) {
         });
     });
     client.close();
+    var ip = require('ip');
+    console.dir ( ip.address() );
     res.send('About API ')
 });
 var server = app.listen(PORT, function () {
