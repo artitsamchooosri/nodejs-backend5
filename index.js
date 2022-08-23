@@ -1,6 +1,7 @@
 var express = require('express');
 var cors = require('cors')
 var app = express();
+let PORT = process.env.PORT || 5000;
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const record_report_as_error_excel = require('./record_report_as_error_excel')
@@ -120,6 +121,6 @@ app.get('/', function (req, res) {
     client.close();
     res.send('About API ')
 });
-var server = app.listen(3001, function () {
+var server = app.listen(PORT, function () {
     console.log('run');
 });
