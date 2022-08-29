@@ -1,5 +1,6 @@
 var express = require('express');
-var cors = require('cors')
+var cors = require('cors');
+var get_ip = require('ipware')().get_ip;
 var app = express();
 let PORT = process.env.PORT || 5000;
 const bodyParser = require('body-parser');
@@ -56,6 +57,8 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
     res.setHeader('Content-Type', 'application/json');
+    var ip_info = get_ip(req);
+    console.log(ip_info);
     next();
 });
 
