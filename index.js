@@ -50,6 +50,12 @@ const purchreq_tracking = require('./excel/purchreq/tracking')
 const machine_works_jobcard = require('./excel/machine_works/jobcard')
 const machine_works_allworkorder = require('./excel/machine_works/allworkorder')
 
+const kpi_production_routeopr_kpi = require('./excel/kpi_production/routeopr_kpi')
+const kpi_production_wrkctrresourcegroup = require('./excel/kpi_production/wrkctrresourcegroup')
+const kpi_production_resourcegrouptoresource = require('./excel/kpi_production/resourcegrouptoresource')
+const kpi_production_wrkctrtable = require('./excel/kpi_production/wrkctrtable')
+
+
 const flutter_productname = require('./flutter/productname')
 
 
@@ -106,6 +112,11 @@ app.use('/excel/data_production_request/picking', data_production_request_pickin
 app.use('/excel/purchreq/tracking', purchreq_tracking)
 app.use('/excel/machine_works/jobcard', machine_works_jobcard)
 app.use('/excel/machine_works/allworkorder', machine_works_allworkorder)
+
+app.use('/excel/kpi_production/routeopr_kpi',kpi_production_routeopr_kpi)
+app.use('/excel/kpi_production/wrkctrresourcegroup',kpi_production_wrkctrresourcegroup)
+app.use('/excel/kpi_production/resourcegrouptoresource',kpi_production_resourcegrouptoresource)
+app.use('/excel/kpi_production/wrkctrtable',kpi_production_wrkctrtable)
 
 app.use('/flutter/productname', flutter_productname)
 
