@@ -34,6 +34,7 @@ const production_month_account_workorderall_bi = require('./bi/production_month_
 const production_month_account_record_report_as_bi = require('./bi/production_month_account/record_report_as_bi')
 const production_month_account_jobcard_bi = require('./bi/production_month_account/jobcard_bi')
 const production_month_account_picking_bi = require('./bi/production_month_account/picking_bi')
+const production_month_account_date  = require('./bi/production_month_account/account_date')
 
 const tranfer_to_sc_wh_allorder = require('./excel/tranfer_to_sc_wh/allorder')
 const tranfer_to_sc_wh_getpool = require('./excel/tranfer_to_sc_wh/getpool')
@@ -98,6 +99,7 @@ app.use('/bi/production_month_account/workorderall_bi', production_month_account
 app.use('/bi/production_month_account/record_report_as_bi', production_month_account_record_report_as_bi)
 app.use('/bi/production_month_account/jobcard_bi', production_month_account_jobcard_bi)
 app.use('/bi/production_month_account/picking_bi', production_month_account_picking_bi)
+app.use('/bi/production_month_account/account_date', production_month_account_date)
 
 app.use('/excel/tranfer_to_sc_wh/allorder', tranfer_to_sc_wh_allorder)
 app.use('/excel/tranfer_to_sc_wh/getpool', tranfer_to_sc_wh_getpool)
