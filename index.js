@@ -54,7 +54,7 @@ const kpi_production_routeopr_kpi = require('./excel/kpi_production/routeopr_kpi
 const kpi_production_wrkctrresourcegroup = require('./excel/kpi_production/wrkctrresourcegroup')
 const kpi_production_resourcegrouptoresource = require('./excel/kpi_production/resourcegrouptoresource')
 const kpi_production_wrkctrtable = require('./excel/kpi_production/wrkctrtable')
-
+const kpi_production_routeopr_master = require('./excel/kpi_production/routeopr_master')
 
 const flutter_productname = require('./flutter/productname')
 
@@ -117,6 +117,7 @@ app.use('/excel/kpi_production/routeopr_kpi',kpi_production_routeopr_kpi)
 app.use('/excel/kpi_production/wrkctrresourcegroup',kpi_production_wrkctrresourcegroup)
 app.use('/excel/kpi_production/resourcegrouptoresource',kpi_production_resourcegrouptoresource)
 app.use('/excel/kpi_production/wrkctrtable',kpi_production_wrkctrtable)
+app.use('/excel/kpi_production/routeopr_master',kpi_production_routeopr_master)
 
 app.use('/flutter/productname', flutter_productname)
 
