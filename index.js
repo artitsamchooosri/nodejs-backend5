@@ -46,7 +46,9 @@ const data_production_request_record_report_as = require('./excel/data_productio
 const data_production_request_jobcard = require('./excel/data_production_request/jobcard')
 const data_production_request_workorderall = require('./excel/data_production_request/workorderall')
 const data_production_request_picking = require('./excel/data_production_request/picking')
+
 const purchreq_tracking = require('./excel/purchreq/tracking')
+const purchreq_poall = require('./excel/purchreq/poall')
 
 const machine_works_jobcard = require('./excel/machine_works/jobcard')
 const machine_works_allworkorder = require('./excel/machine_works/allworkorder')
@@ -111,7 +113,12 @@ app.use('/excel/data_production_request/record_report_as', data_production_reque
 app.use('/excel/data_production_request/jobcard', data_production_request_jobcard)
 app.use('/excel/data_production_request/workorderall', data_production_request_workorderall)
 app.use('/excel/data_production_request/picking', data_production_request_picking)
+
+
 app.use('/excel/purchreq/tracking', purchreq_tracking)
+app.use('/excel/purchreq/poall', purchreq_poall)
+
+
 app.use('/excel/machine_works/jobcard', machine_works_jobcard)
 app.use('/excel/machine_works/allworkorder', machine_works_allworkorder)
 

@@ -53,7 +53,7 @@ router.get('/', (req, res) => {
     "WHERE\n" +
     "	WORKFLOWTRACKINGSTATUSTABLE.CONTEXTTABLEID = '20622' AND\n" +
     "	WORKFLOWTRACKINGTABLE.TRACKINGTYPE = '4'";
-    console.log(Q);
+    //console.log(Q);
     sql.connect(config, function (err) {
        if (err) console.log(err)
         var request = new sql.Request();
